@@ -1,19 +1,24 @@
-安裝mininet
+# 安裝mininet
 sudo apt-get install mininet
 
 
-安裝ryu
+# 安裝ryu
+
+
+# 安裝python的套件管理工具
 sudo apt-get install python-pip
 sudo apt-get install python-setuptools
 sudo apt-get install python-pip3
 sudo apt-get install python3-setuptools
 
+# 安裝python的相依套件
 sudo apt-get install python3-eventlet
 sudo apt-get install python3-routes
 sudo apt-get install python3-webob
 sudo apt-get install python3-paramiko
 sudo apt-get install python3-gevent
 
+# 安裝python的相依套件(剩下的)
 sudo apt-get install python-dev
 sudo apt-get install autoconf
 sudo apt-get install binutils
@@ -36,19 +41,21 @@ sudo apt-get install zlib1g-dev
 sudo apt-get install libxml2-dev
 sudo apt-get install libxslt1-dev
 
-pip install lxml
-pip install paramiko
-pip install ovs
-pip install six
-pip install six –upgrade   ###
-pip install flask
-pip install gevent-websocket
-pip install netaddr
-pip install eventlet
-pip install tinyrpc
-pip install msgpack-python
-pip install oslo.config
+利用pip3安裝執行ryu所需要的相依套件
+pip3 install lxml
+pip3 install paramiko
+pip3 install ovs
+pip3 install six
+pip3 install six –upgrade   ###
+pip3 install flask
+pip3 install gevent-websocket
+pip3 install netaddr
+pip3 install eventlet
+pip3 install tinyrpc
+pip3 install msgpack-python
+pip3 install oslo.config
 
+#安裝ryu
 sudo git clone git://github.com/osrg/ryu.git
 
 sudo cd ryu
@@ -56,7 +63,7 @@ sudo python3 ./setup.py install
 
 
 
-修正錯誤(如果沒有發生錯誤的話，就不用修正可直接跳過此步驟)
+# 修正錯誤(如果沒有發生錯誤的話，就不用修正可直接跳過此步驟)
 
     # 執行ryu-manager後會跳出DistributionNotFound：ＸＸＸ的錯誤訊息，我們利用pip install ＸＸＸ的指令來安裝遺漏的相依套件
 
